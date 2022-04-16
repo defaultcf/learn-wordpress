@@ -1,11 +1,11 @@
 version: 0.0
 os: linux
 files:
-  - source: /wordpress/
+  - source: /
     destination: /var/www/html/
 files_exists_behavior: OVERWRITE
 hooks:
   AfterInstall:
-    - location: wordpress/scripts/install_dependencies.sh
+    - location: /scripts/install_dependencies.sh
       timeout: 300
       runas: root
